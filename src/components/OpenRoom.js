@@ -7,6 +7,7 @@ function OpenRoom() {
   const [totalNum, setTotalNum] = useState('');
   const [titleError, setTitleError] = useState('');
 
+  console.log('다른 예제 브랜치 코드 수정');
   const resetForm = () => {
     setRoomTitle('');
   };
