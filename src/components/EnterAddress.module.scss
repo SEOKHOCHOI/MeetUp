@@ -1,0 +1,110 @@
+$light-color: #f2c879;
+$normal-color: #f2a341;
+$deep-color: #d07025;
+$title-color: rgb(82, 74, 53); // 앱 이름
+$font-color: rgb(118, 118, 116); // 일반 글자
+$background-color: rgb(246, 240, 234);
+$name-color: rgb(239, 84, 83); // 방 이름
+$font-color-white: whitesmoke;
+$background-btn: rgb(92, 137, 199);
+
+@mixin display-flex($align-items: center) {
+  display: flex;
+  justify-content: center;
+  align-items: $align-items;
+}
+@mixin btn {
+  &:hover {
+    outline: 2px solid $light-color;
+  }
+  &:active {
+    background-color: $normal-color;
+    outline: 2px solid $normal-color;
+  }
+}
+
+.enter_address {
+  @include display-flex;
+  flex-direction: column;
+  width: 390px;
+  height: 844px;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  .navbar {
+  }
+  #room_name {
+    @include display-flex;
+    font: {
+      size: 30px;
+    }
+  }
+  .end_top {
+    @include display-flex;
+    letter-spacing: 3px;
+    margin: {
+      top: 60px;
+    }
+    #end {
+      @include display-flex;
+      align-items: center;
+      width: 220px;
+      height: 55px;
+      color: $font-color-white;
+      border: none;
+      box-shadow: 0 4px 10px 2px rgb(220, 220, 220);
+      font: {
+        weight: bolder;
+        size: 22px;
+      }
+      background: {
+        color: $light-color;
+      }
+      border: {
+        radius: 22px;
+      }
+
+      @include btn;
+    }
+  }
+  .address_btn {
+    @include display-flex;
+    letter-spacing: 2px;
+    margin: {
+      top: 200px;
+    }
+    button {
+      box-shadow: 0 4px 10px 2px rgb(220, 220, 220);
+      border: none;
+      @include display-flex;
+      width: 70px;
+      height: 60px;
+      color: $font-color-white;
+      background: {
+        color: $light-color;
+      }
+      font: {
+        weight: bolder;
+      }
+      border: {
+        radius: 15%;
+        color: none;
+      }
+      @include btn;
+    }
+  }
+  .member_top {
+    @include display-flex;
+
+    #member {
+      letter-spacing: 6px;
+      font: {
+        size: 40px;
+        weight: bolder;
+      }
+    }
+  }
+
+  border: 1px solid $font-color;
+}
