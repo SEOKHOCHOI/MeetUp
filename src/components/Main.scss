@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'BMJUA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+
+$maincolor : #F2C879;
+$subsolor : #F2A341;
+
+@mixin explain_span(){
+    font-weight: 900;
+    font-size: 28px;
+}
+
+body{
+    font-family: 'nanumsquare';
+    overflow: auto;
+    height: 200vw;
+    position: relative;
+}
+
+
+.content{
+    text-align: center;
+}
+.explain{
+    padding: 165px 20px 60px 20px;
+
+    span{
+        @include explain_span();
+    }
+    .highlighter{
+        font-weight: 500;
+        color: #F2A341;
+        font-family: 'BMJUA';
+    }
+    p{
+        color: rgb(85, 85, 85);
+    }
+}
+.displayimg{
+    width: 90vw;
+    display: inline-block;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.create{
+    border: none;
+    margin: 80px;
+    margin-bottom: 150px;
+    padding: 20px 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: 0.25s;
+    color: white;
+    background-color: $maincolor;
+    font-family: 'BMJUA';
+    font-size: 20px;
+
+}
+
+.create:active {
+    transform: scale(1.5);
+}
+.create:hover{
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.img_mockup{
+    width: 55%;
+    text-align: center;
+}
+.explain_mockup{
+    span{
+        @include explain_span();
+    }p{
+        color: rgb(85, 85, 85);
+    }
+    padding: 40px;
+    
+}
+
+.modal{
+    float: right;
+    width: 80vw;
+    height: 100vw;
+    background-color: white;
+    position: relative;
+}
+// .bottombox{
+//     background-color: black;
+//     width: 100%;
+//     height: 60px;
+//     position: absolute;
+//     bottom: 0;
+//     color: white;
+   
+// }
