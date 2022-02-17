@@ -1,5 +1,6 @@
+/*eslint-disable*/
 import React, {useState} from 'react';
-import './Historypage.scss';
+import Styles from './Historypage.module.scss';
 import Nav from './Nav.js';
 
 function Historypage() {
@@ -9,9 +10,9 @@ function Historypage() {
     let [place, placeset] = useState(['카페', '음식점']);
     
     return(
-        <div className='history'>
+        <div className= {Styles.history}>
             <Nav/>
-            <div className='row'>
+            <div className= {Styles.row}>
                 {
                     name.map((a, i)=>{
                         return <Card name={name[i]} people={people[i]} ing = {ing[i]} 
@@ -27,8 +28,8 @@ function Historypage() {
 
 function Card (props){
     return(
-        <div className='col'>
-            <span> &lt; {props.name} &gt; </span> <span className='ing'>{props.ing}</span><br/>
+        <div className= {Styles.col}>
+            <span> &lt; {props.name} &gt; </span> <span className={Styles.ing}>{props.ing}</span><br/>
             <span>인원수: {props.people}명</span><br/>
             <span>장소: {props.place}</span>
         </div>
