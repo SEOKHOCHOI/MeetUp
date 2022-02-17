@@ -13,7 +13,6 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Main/>
       <Switch>
         <Route exact path="/" component={Main}/>
         <Route path="/menu" component={Menu}/>

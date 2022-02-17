@@ -15,9 +15,8 @@ $subsolor : #F2A341;
     font-size: 28px;
 }
 
-body{
+.App{
     font-family: 'nanumsquare';
-    overflow: auto;
     height: 200vw;
     position: relative;
 }
@@ -93,12 +92,3 @@ body{
     background-color: white;
     position: relative;
 }
-// .bottombox{
-//     background-color: black;
-//     width: 100%;
-//     height: 60px;
-//     position: absolute;
-//     bottom: 0;
-//     color: white;
-   
-// }
