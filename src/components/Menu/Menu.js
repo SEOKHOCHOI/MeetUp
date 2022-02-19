@@ -1,15 +1,15 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { VscChromeClose } from "react-icons/vsc";
 import Style from './Menu.module.scss';
 import {Link} from 'react-router-dom';
 
 function Menu() {
-    let history = useHistory();
+    let navigate = useNavigate();
     return (
     <>
         <div className={Style.overlay}>
-            <VscChromeClose className={Style.xicon} onClick={() => {history.goBack()}}/>
+            <VscChromeClose className={Style.xicon} onClick={() => {navigate(-1)}}/>
             <div className={Style.menu}>
                 <ul>
                     <li>

@@ -16,7 +16,7 @@ function Main() {
           <p>이젠 중간 지점에서 만나세요</p>
         </div>
         
-        <img className= {Styles.displayimg} src={require('./img/display_img1.jpg')}/>
+        <img className= {Styles.displayimg} src={require('../img/display_img1.jpg')}/>
 
         <Link to = "/openroom">
           <button className= {Styles.create} type='button'>
@@ -25,7 +25,7 @@ function Main() {
         </Link>
 
         <div>*) 3장 사진을 슬라이드 효과와 함께 넣을 예정입니다<br></br>
-          <img src={require('./img/iphone12pro_3.png') }className={Styles.img_mockup}/>
+          <img src={require('../img/iphone12pro_3.png') }className={Styles.img_mockup}/>
         </div>
 
         <div className= {Styles.explain_mockup}>
