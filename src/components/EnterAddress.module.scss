@@ -26,8 +26,6 @@ $background-btn: rgb(92, 137, 199);
 .enter_address {
   @include display-flex;
   flex-direction: column;
-  width: 390px;
-  height: 844px;
   margin: {
     left: auto;
     right: auto;
@@ -105,6 +103,4 @@ $background-btn: rgb(92, 137, 199);
       }
     }
   }
-
-  border: 1px solid $font-color;
 }
