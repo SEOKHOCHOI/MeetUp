@@ -1,5 +1,7 @@
+/*eslint-disable*/
 import React, { useState } from 'react';
 import Styles from "./OpenRoom.module.scss";
+import Nav from './Nav';
 
 function OpenRoom() {
 
@@ -36,10 +38,7 @@ function OpenRoom() {
   };
   return(
     <div className={Styles.open_room}>
-      <header>
-        <h6>Meet Up</h6>
-        <nav>작대기세개</nav>
-      </header>
+      <Nav />
       <form onSubmit={onSubmit}>
         <main className={Styles.main}>
           <article>
