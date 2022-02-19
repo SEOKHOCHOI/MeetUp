@@ -58,9 +58,6 @@ $background-btn: rgb(92, 137, 199);
 .open_room {
   @include display-flex(center, space-between);
   flex-direction: column;
-
-  width: 390px;
-  height: 844px;
   margin: {
     left: auto;
     right: auto;
@@ -77,6 +74,16 @@ $background-btn: rgb(92, 137, 199);
       }
       input {
         @include input;
+      }
+      div {
+        font: {
+          size: 12px;
+          weight: bolder;
+        }
+        margin: {
+          left: 3px;
+        }
+        color: $name-color;
       }
     }
     #place_title {
@@ -201,11 +208,18 @@ $background-btn: rgb(92, 137, 199);
         width: 116px;
         text-align: center;
         height: 36px;
+        outline: none;
         border: {
           top: 1px solid $light-color;
           bottom: 1px solid $light-color;
           right: none;
           left: none;
+        }
+      }
+      button:first-child {
+        @include display-flex;
+        font: {
+          size: 40px;
         }
       }
       button {
@@ -252,6 +266,4 @@ $background-btn: rgb(92, 137, 199);
       @include btn;
     }
   }
-
-  border: 1px solid black;
 }

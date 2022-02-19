@@ -2,7 +2,6 @@ import React from 'react';
 import Styles from './EnterAddress.module.scss';
 
 function EnterAddress() {
-  console.log('haha');
   return(
     <div className={Styles.enter_address}>
       <header className={Styles.navbar}>
