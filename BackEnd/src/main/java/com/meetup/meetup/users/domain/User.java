@@ -4,6 +4,7 @@ import com.meetup.meetup.comments.domain.Comment;
 import com.meetup.meetup.common.domain.BaseTimeEntity;
 import com.meetup.meetup.likes.domain.Like;
 import com.meetup.meetup.moims.domain.UserToMoim;
+import com.meetup.meetup.users.dtos.UserResponseDto;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -51,5 +52,23 @@ public class User extends BaseTimeEntity {
         this.address = address;
         this.picturePath = picturePath;
         this.type = type;
+    }
+
+    public UserResponseDto toResponseDto() {
+        return new UserResponseDto(email, picturePath, type);
+    }
+
+    public void update(String password, Address address, String picturePath) {
+        if (password != null || password.equals("")) {
+            this.password = password;
+        }
+
+        if (address != null) {
+            this.address = address;
+        }
+
+        if (picturePath != null || picturePath.equals("")) {
+            this.picturePath = picturePath;
+        }
     }
 }

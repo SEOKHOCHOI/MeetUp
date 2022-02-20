@@ -1,4 +1,4 @@
 package com.meetup.meetup.comments.service;
 
-public interface CommentService {
+public class CommentService {
 }

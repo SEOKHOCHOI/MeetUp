@@ -1,4 +1,4 @@
-package com.meetup.meetup.moims.dto;
+package com.meetup.meetup.moims.dtos;
 
 import lombok.Data;
 

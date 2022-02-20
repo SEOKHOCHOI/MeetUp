@@ -1,6 +1,6 @@
 package com.meetup.meetup.moims.controller;
 
-import com.meetup.meetup.moims.dto.MoimDto;
+import com.meetup.meetup.moims.dtos.MoimDto;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,14 +1,28 @@
 package com.meetup.meetup.users.controller;
 
+import com.meetup.meetup.users.domain.User;
+import com.meetup.meetup.users.dtos.UserResponseDto;
+import com.meetup.meetup.users.dtos.UserSaveRequestDto;
+import com.meetup.meetup.users.dtos.UserUpdateRequestDto;
+import com.meetup.meetup.users.repository.UserRepository;
+import com.meetup.meetup.users.service.UserService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/users")
+@RequiredArgsConstructor
 public class UserController {
 
+    private final UserRepository userRepository;
+    private final UserService userService;
+
     @PostMapping("")
-    public String save() {
-        return "hi";
+    public Long save(@RequestBody UserSaveRequestDto requestDto) {
+
+        return userRepository.save(requestDto.toEntity()).getId();
     }
 
     @PostMapping("/login")
@@ -22,12 +36,16 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public String findUser(@PathVariable(name = "id") Long userId) {
-        return "hi";
+    public UserResponseDto findUser(@PathVariable(name = "id") Long userId) {
+
+        Optional<User> findUser = userRepository.findById(userId);
+
+        return findUser.get().toResponseDto();
     }
 
     @PutMapping("/{id}")
-    public String updateUser(@PathVariable(name = "id") Long userId) {
-        return "hi";
+    public Long updateUser(@PathVariable(name = "id") Long userId, @RequestBody UserUpdateRequestDto requestDto) {
+        Optional<User> findUser = userRepository.findById(userId);
+        return userService.update(userId, requestDto);
     }
 }

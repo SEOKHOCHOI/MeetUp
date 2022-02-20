@@ -1,13 +1,12 @@
 package com.meetup.meetup.users.domain;
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Embeddable;
 
 @Embeddable
 @Getter
+@EqualsAndHashCode
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Address {
 
@@ -17,6 +16,7 @@ public class Address {
     private String longitude;
     private String latitude;
 
+    @Builder
     public Address(String city, String street, String zipcode, String longitude, String latitude) {
         this.city = city;
         this.street = street;
