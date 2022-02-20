@@ -8,7 +8,7 @@
 
 
 $maincolor : #F2C879;
-$subsolor : #F2A341;
+$subcolor : #F2A341;
 
 @mixin explain_span(){
     font-weight: 900;
@@ -33,7 +33,7 @@ $subsolor : #F2A341;
     }
     .highlighter{
         font-weight: 500;
-        color: #F2A341;
+        color: $subcolor;
         font-family: 'BMJUA';
     }
     p{

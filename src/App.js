@@ -15,7 +15,6 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Main />}/>
-        <Route path="/menu" element={<Menu />}/>
         <Route path="/history" element={<Historypage />}/>
         <Route path="/openroom" element={<OpenRoom />}/>
         <Route path="/enteraddress" element={<EnterAddress />}/>

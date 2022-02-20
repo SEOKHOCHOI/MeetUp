@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
-import Menu from './Menu';
+
 
 function MenuRoute() {
   return(
     <Routes>
-      <Route exact path="/" element={<Menu />} />
+      {/* Menu 컴포넌트 있던 자리입니다. */}
       <Route path="test" element={<Tenu />} />
     </Routes>
   );
