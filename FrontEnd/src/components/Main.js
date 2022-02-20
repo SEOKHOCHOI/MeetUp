@@ -2,7 +2,7 @@
 import React from 'react';
 import Styles from './Main.module.scss';
 import Nav from './Nav.js';
-import {Link, Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 function Main() {
