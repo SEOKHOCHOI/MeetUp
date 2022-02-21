@@ -31,10 +31,10 @@ public class User extends BaseTimeEntity {
     @Embedded
     private Address address;
 
-    private String picturePath;
+    private String picture;
 
     @Enumerated(EnumType.STRING)
-    private UsersType type;
+    private Role role;
 
     @OneToMany(mappedBy = "user")
     private List<UserToMoim> userToMoims = new ArrayList<>();
@@ -46,16 +46,16 @@ public class User extends BaseTimeEntity {
     private List<Comment> comments = new ArrayList<>();
 
     @Builder
-    public User(String email, String password, Address address, String picturePath, UsersType type) {
+    public User(String email, String password, Address address, String picturePath, Role type) {
         this.email = email;
         this.password = password;
         this.address = address;
-        this.picturePath = picturePath;
-        this.type = type;
+        this.picture = picturePath;
+        this.role = type;
     }
 
     public UserResponseDto toResponseDto() {
-        return new UserResponseDto(email, picturePath, type);
+        return new UserResponseDto(email, picture, role);
     }
 
     public void update(String password, Address address, String picturePath) {
@@ -68,7 +68,7 @@ public class User extends BaseTimeEntity {
         }
 
         if (picturePath != null || picturePath.equals("")) {
-            this.picturePath = picturePath;
+            this.picture = picturePath;
         }
     }
 }

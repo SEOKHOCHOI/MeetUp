@@ -1,6 +1,6 @@
 package com.meetup.meetup.users.dtos;
 
-import com.meetup.meetup.users.domain.UsersType;
+import com.meetup.meetup.users.domain.Role;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -12,7 +12,7 @@ class UserResponseDtoTest {
         //given
         String email = "test@test.com";
         String picturePath = "~/test.jpg";
-        UsersType type = UsersType.USER;
+        Role type = Role.USER;
 
         //when
         UserResponseDto dto = new UserResponseDto(email, picturePath, type);

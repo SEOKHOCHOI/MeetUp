@@ -2,7 +2,7 @@ package com.meetup.meetup.users.dtos;
 
 import com.meetup.meetup.users.domain.Address;
 import com.meetup.meetup.users.domain.User;
-import com.meetup.meetup.users.domain.UsersType;
+import com.meetup.meetup.users.domain.Role;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,10 +14,10 @@ public class UserSaveRequestDto {
     private String password;
     private Address address;
     private String picturePath;
-    private UsersType type;
+    private Role type;
 
     @Builder
-    public UserSaveRequestDto(String email, String password, Address address, String picturePath, UsersType type) {
+    public UserSaveRequestDto(String email, String password, Address address, String picturePath, Role type) {
         this.email = email;
         this.password = password;
         this.address = address;

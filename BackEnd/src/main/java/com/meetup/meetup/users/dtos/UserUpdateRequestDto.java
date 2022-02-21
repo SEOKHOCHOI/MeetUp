@@ -23,6 +23,6 @@ public class UserUpdateRequestDto {
     public UserUpdateRequestDto(User user) {
         this.password = user.getPassword();
         this.address = user.getAddress();
-        this.picturePath = user.getPicturePath();
+        this.picturePath = user.getPicture();
     }
 }
