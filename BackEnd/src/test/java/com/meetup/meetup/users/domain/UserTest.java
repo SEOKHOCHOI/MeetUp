@@ -19,7 +19,7 @@ class UserTest {
 
         String email = "test@test.com";
         String password = "12345";
-        String picturePath = "~/test.jpg";
+        String picture = "~/test.jpg";
         Role type = Role.USER;
 
         //when
@@ -27,7 +27,7 @@ class UserTest {
                 .email(email)
                 .password(password)
                 .address(address)
-                .picturePath(picturePath)
+                .picture(picture)
                 .type(type)
                 .build();
 
@@ -35,7 +35,7 @@ class UserTest {
         assertThat(user.getEmail()).isEqualTo(email);
         assertThat(user.getPassword()).isEqualTo(password);
         assertThat(user.getAddress()).isEqualTo(address);
-        assertThat(user.getPicture()).isEqualTo(picturePath);
+        assertThat(user.getPicture()).isEqualTo(picture);
         assertThat(user.getRole()).isEqualTo(type);
 
     }

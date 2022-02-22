@@ -10,19 +10,19 @@ public class UserUpdateRequestDto {
 
     private String password;
     private Address address;
-    private String picturePath;
+    private String picture;
 
     @Builder
-    public UserUpdateRequestDto(String password, Address address, String picturePath) {
+    public UserUpdateRequestDto(String password, Address address, String picture) {
         this.password = password;
         this.address = address;
-        this.picturePath = picturePath;
+        this.picture = picture;
     }
 
     @Builder
     public UserUpdateRequestDto(User user) {
         this.password = user.getPassword();
         this.address = user.getAddress();
-        this.picturePath = user.getPicture();
+        this.picture = user.getPicture();
     }
 }

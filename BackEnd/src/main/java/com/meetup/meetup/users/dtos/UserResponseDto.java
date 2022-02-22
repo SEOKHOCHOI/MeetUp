@@ -8,18 +8,18 @@ import lombok.Data;
 public class UserResponseDto {
 
     private String email;
-    private String picturePath;
+    private String picture;
     private Role type;
 
-    public UserResponseDto(String email, String picturePath, Role type) {
+    public UserResponseDto(String email, String picture, Role type) {
         this.email = email;
-        this.picturePath = picturePath;
+        this.picture = picture;
         this.type = type;
     }
 
     public UserResponseDto(User user) {
         this.email = user.getEmail();
-        this.picturePath = user.getPicture();
+        this.picture = user.getPicture();
         this.type = user.getRole();
     }
 }

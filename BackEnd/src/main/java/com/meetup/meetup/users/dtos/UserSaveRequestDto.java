@@ -13,15 +13,15 @@ public class UserSaveRequestDto {
     private String email;
     private String password;
     private Address address;
-    private String picturePath;
+    private String picture;
     private Role type;
 
     @Builder
-    public UserSaveRequestDto(String email, String password, Address address, String picturePath, Role type) {
+    public UserSaveRequestDto(String email, String password, Address address, String picture, Role type) {
         this.email = email;
         this.password = password;
         this.address = address;
-        this.picturePath = picturePath;
+        this.picture = picture;
         this.type = type;
     }
 
@@ -30,7 +30,7 @@ public class UserSaveRequestDto {
                 .email(email)
                 .password(password)
                 .address(address)
-                .picturePath(picturePath)
+                .picture(picture)
                 .type(type)
                 .build();
     }

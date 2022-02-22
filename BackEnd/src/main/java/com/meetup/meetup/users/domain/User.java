@@ -46,11 +46,11 @@ public class User extends BaseTimeEntity {
     private List<Comment> comments = new ArrayList<>();
 
     @Builder
-    public User(String email, String password, Address address, String picturePath, Role type) {
+    public User(String email, String password, Address address, String picture, Role type) {
         this.email = email;
         this.password = password;
         this.address = address;
-        this.picture = picturePath;
+        this.picture = picture;
         this.role = type;
     }
 
@@ -58,7 +58,7 @@ public class User extends BaseTimeEntity {
         return new UserResponseDto(email, picture, role);
     }
 
-    public void update(String password, Address address, String picturePath) {
+    public void update(String password, Address address, String picture) {
         if (password != null || password.equals("")) {
             this.password = password;
         }
@@ -67,8 +67,8 @@ public class User extends BaseTimeEntity {
             this.address = address;
         }
 
-        if (picturePath != null || picturePath.equals("")) {
-            this.picture = picturePath;
+        if (picture != null || picture.equals("")) {
+            this.picture = picture;
         }
     }
 }

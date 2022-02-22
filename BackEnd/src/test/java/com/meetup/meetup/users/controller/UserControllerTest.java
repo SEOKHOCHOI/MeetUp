@@ -47,17 +47,17 @@ class UserControllerTest {
 
     MockMvc mvc;
 
-    @AfterEach
-    void cleanUp() {
-        userRepository.deleteAll();
-    }
-
     @BeforeEach
     void setup() {
         mvc = MockMvcBuilders
                 .webAppContextSetup(context)
                 .apply(springSecurity())
                 .build();
+    }
+
+    @AfterEach
+    void cleanUp() {
+        userRepository.deleteAll();
     }
 
     @Test
@@ -73,7 +73,7 @@ class UserControllerTest {
                 .latitude("36.21353")
                 .longitude("123.124545")
                 .build();
-        String picturePath = "~/test.jpg";
+        String picture = "~/test.jpg";
         Role type = Role.USER;
 
         //when
@@ -81,7 +81,7 @@ class UserControllerTest {
                 .email(email)
                 .password(password)
                 .address(address)
-                .picturePath(picturePath)
+                .picture(picture)
                 .type(type)
                 .build();
 
@@ -91,7 +91,7 @@ class UserControllerTest {
         mvc.perform(get("/users/"+user.getId()))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.email", email).exists())
-                .andExpect(jsonPath("$.picturePath", picturePath).exists())
+                .andExpect(jsonPath("$.picture", picture).exists())
                 .andExpect(jsonPath("$.type", type).exists());
     }
 
@@ -108,14 +108,14 @@ class UserControllerTest {
                 .latitude("36.21353")
                 .longitude("123.124545")
                 .build();
-        String picturePath = "~/test.jpg";
+        String picture = "~/test.jpg";
         Role type = Role.USER;
 
         UserSaveRequestDto requestDto = UserSaveRequestDto.builder()
                 .email(email)
                 .password(password)
                 .address(address)
-                .picturePath(picturePath)
+                .picture(picture)
                 .type(type)
                 .build();
 
@@ -139,7 +139,7 @@ class UserControllerTest {
         assertThat(users.get(0).getEmail()).isEqualTo(email);
         assertThat(users.get(0).getPassword()).isEqualTo(password);
         assertThat(users.get(0).getAddress()).isEqualTo(address);
-        assertThat(users.get(0).getPicture()).isEqualTo(picturePath);
+        assertThat(users.get(0).getPicture()).isEqualTo(picture);
         assertThat(users.get(0).getRole()).isEqualTo(Role.USER);
     }
 
@@ -156,14 +156,14 @@ class UserControllerTest {
                 .latitude("36.21353")
                 .longitude("123.124545")
                 .build();
-        String picturePath = "~/test.jpg";
+        String picture = "~/test.jpg";
         Role type = Role.USER;
 
         User user = User.builder()
                 .email(email)
                 .password(password)
                 .address(address)
-                .picturePath(picturePath)
+                .picture(picture)
                 .type(type)
                 .build();
 
@@ -177,12 +177,12 @@ class UserControllerTest {
                 .latitude("110.12314214")
                 .longitude("58.2139213")
                 .build();
-        String newPicturePath = "~/newTest.jpg";
+        String newPicture = "~/newTest.jpg";
 
         UserUpdateRequestDto requestDto = UserUpdateRequestDto.builder()
                 .password(newPassword)
                 .address(newAddress)
-                .picturePath(newPicturePath)
+                .picture(newPicture)
                 .build();
 
         String url = "http://localhost:" + port + "/users/" + savedUser.getId();
@@ -207,7 +207,7 @@ class UserControllerTest {
         List<User> users = userRepository.findAll();
         assertThat(users.get(0).getPassword()).isEqualTo(newPassword);
         assertThat(users.get(0).getAddress()).isEqualTo(newAddress);
-        assertThat(users.get(0).getPicture()).isEqualTo(newPicturePath);
+        assertThat(users.get(0).getPicture()).isEqualTo(newPicture);
 
     }
 }

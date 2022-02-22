@@ -19,7 +19,7 @@ public class UserService {
         User user = userRepository.findById(id).orElseThrow(
                 () -> new IllegalArgumentException("회원이 존재하지 않습니다. id=" + id));
 
-        user.update(requestDto.getPassword(), requestDto.getAddress(), requestDto.getPicturePath());
+        user.update(requestDto.getPassword(), requestDto.getAddress(), requestDto.getPicture());
 
         return user.getId();
     }
