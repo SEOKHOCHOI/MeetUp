@@ -4,8 +4,10 @@ import com.meetup.meetup.users.domain.Address;
 import com.meetup.meetup.users.domain.User;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class UserUpdateRequestDto {
 
     private String password;
