@@ -1,13 +1,13 @@
 spring:
-  datasource:
-    url: jdbc:h2:tcp://localhost/~/meetup
-    username: sa
-    password:
-    driver-class-name: org.h2.Driver
+#  datasource:
+#    url: jdbc:h2:tcp://localhost/~/meetup
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
 
   jpa:
-    hibernate:
-      ddl-auto: create
+#    hibernate:
+#      ddl-auto: create
     properties:
       hibernate:
         #show_sql: true #sql 표시
@@ -22,7 +22,7 @@ spring:
         one-indexed-parameters: true
 
   profiles:
-    include: oauth
+    include: oauth, real-db
 
   session:
     store-type: jdbc
