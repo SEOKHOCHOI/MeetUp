@@ -10,7 +10,6 @@ spring:
       ddl-auto: create
     properties:
       hibernate:
-        #show_sql: true #sql 표시
         format_sql: true
         default_batch_fetch_size: 100
 
@@ -21,8 +20,14 @@ spring:
         max-page-size: 2000
         one-indexed-parameters: true
 
-  profiles:
-    include: oauth
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: test
+            client-secret: test
+            scope: profile, email
 
   session:
     store-type: jdbc
@@ -32,4 +37,3 @@ spring:
 logging:
   level:
     org.hibernate.SQL: debug
-    #org.hibernate.type: trace #파라미터 바인딩 표시
