@@ -9,7 +9,6 @@ function Main() {
 
   return (
     <div className= {Styles.App}>
-      <Nav/>
       <div className= {Styles.content}>
         <div className= {Styles.explain}>
           <span>약속 장소는 <span className= {Styles.highlighter}>Meet Up</span>!</span>
