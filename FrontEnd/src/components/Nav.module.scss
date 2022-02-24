@@ -1,125 +1,130 @@
-$maincolor : #F2A341;
-@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+$maincolor: #f2a341;
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
 
-.nav{
-    position: fixed;
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  font-family: "BMJUA";
+  background-color: white;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  color: $maincolor;
+  z-index: 1;
+
+  .nav_in {
     display: flex;
-    width: 100vw;
-    height: 75px;
-    align-items:center;
-    justify-content : space-between;
-    font-family: 'BMJUA';
-    background-color: white;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    align-items: center;
+    max-width: 60%;
+    min-width: 380px;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+
+  .nav_logo {
+    font-size: 25px;
+    padding-left: 20px;
+  }
+  a {
     text-decoration: none;
     color: $maincolor;
-
-    .nav_logo{
-        font-size: 25px;
-        padding-left: 20px;
-    }
-    a { 
-        text-decoration: none; 
-        color: $maincolor;
+  }
 }
 
+.sidebar {
+  z-index: 1;
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  right: -300px;
+  transition: all 0.35s;
+  top: 0;
+  background-color: white;
+}
+input[id="menuicon"]:checked + label + div {
+  right: 0;
+}
+input[id="menuicon"]:checked + label + div + li {
+  right: 0;
 }
 
-.sidebar{
-    z-index: 1;
-    width: 300px;
-    height: 100%;
-    position: fixed;
-    right: -300px;
-    transition: all .35s;
-    top: 0;
-    background-color: white;
-}
-input[id="menuicon"]:checked + label + div{
-    right: 0;
-}
-input[id="menuicon"]:checked + label + div+ li{
-    right: 0;
+.check {
+  display: none;
+  color: white;
 }
 
+input[id="menuicon"] + label {
+  display: block;
+  width: 25px;
+  height: 20px;
+  z-index: 2;
+  position: relative;
+  right: 20px;
+  cursor: pointer;
 
-.check{
-    display: none;
-    color: white;
-} 
-
-input[id="menuicon"]+label{
-    
+  span {
     display: block;
-    width: 25px;
-    height: 20px;
-    z-index: 2;
-    position: relative;
-    right: 20px;
-    cursor: pointer;
-
-    span{
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 4px;
-        border-radius: 30px;
-        background-color: $maincolor;
-        transition: all .35s;
-    }
-    span:nth-child(1){
-        top:0;
-    }
-    span:nth-child(2){
-        top:50%;
-        transform: translateY(-50%);
-    }
-    span:nth-child(3){
-        bottom: 0;
-    }
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 30px;
+    background-color: $maincolor;
+    transition: all 0.35s;
+  }
+  span:nth-child(1) {
+    top: 0;
+  }
+  span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  span:nth-child(3) {
+    bottom: 0;
+  }
 }
 
-input[id="menuicon"]:checked + label{
-    span:nth-child(1){
-        top: 50%;
-        background-color: $maincolor;
-        transform: translateY(-50%) rotate(45deg);
-
-    }
-    span:nth-child(2){
-        opacity: 0;
-    }
-    span:nth-child(3){
-        background-color: $maincolor;
-        bottom: 50%;
-        transform: translateY(50%) rotate(-45deg);
-    }
-    .home{
-        right: 0;
-    }   
+input[id="menuicon"]:checked + label {
+  span:nth-child(1) {
+    top: 50%;
+    background-color: $maincolor;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  span:nth-child(2) {
+    opacity: 0;
+  }
+  span:nth-child(3) {
+    background-color: $maincolor;
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+  }
+  .home {
+    right: 0;
+  }
 }
 
-
-.menu{
-    font-family: 'nanumsquare';
+.menu {
+  font-family: "nanumsquare";
+  text-decoration: none;
+  ul {
+    list-style: none;
+  }
+  a {
     text-decoration: none;
-    ul{
-        list-style: none;
-        
-    }
-    a { 
-        text-decoration: none; 
-        color: $maincolor;
-}
+    color: $maincolor;
+  }
 
-    li{
-        position: relative;
-        top: 100px;
-        padding: 10px;
+  li {
+    position: relative;
+    top: 100px;
+    padding: 10px;
 
-        font-weight:900;
-        font-size: 28px;
-        line-height: 90px;
-    }
-
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 90px;
+  }
 }
