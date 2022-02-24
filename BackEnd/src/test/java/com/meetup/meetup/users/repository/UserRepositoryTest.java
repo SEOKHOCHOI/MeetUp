@@ -1,20 +1,12 @@
 package com.meetup.meetup.users.repository;
 
-import com.meetup.meetup.users.domain.Address;
-import com.meetup.meetup.users.domain.User;
-import com.meetup.meetup.users.domain.Role;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 @Transactional
 class UserRepositoryTest {
-
+/*
     @Autowired
     UserRepository userRepository;
 
@@ -50,4 +42,5 @@ class UserRepositoryTest {
         //then
         assertThat(user).isEqualTo(findUser);
     }
+*/
 }

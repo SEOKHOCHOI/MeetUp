@@ -1,10 +1,7 @@
 package com.meetup.meetup.users.domain;
 
-import org.junit.jupiter.api.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
-
 class UserTest {
+/*
 
     @Test
     void 유저_객체_생성하기() {
@@ -39,4 +36,6 @@ class UserTest {
         assertThat(user.getRole()).isEqualTo(type);
 
     }
+*/
+
 }
