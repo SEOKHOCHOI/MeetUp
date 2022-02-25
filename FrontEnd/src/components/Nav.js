@@ -9,12 +9,12 @@ function Nav() {
 
     return (
         <div className= {Styles.nav}>
-            
+          <div className={Styles.nav_in}>
             <p className={Styles.nav_logo}>
                 <Link to = "/">
                     Meet Up
-                </Link></p>
-                
+                </Link>
+            </p>
                 <div className={Styles.overlay}>
                     <input className={Styles.check} type="checkbox" id="menuicon"/>
                     <label for = "menuicon">
@@ -40,6 +40,7 @@ function Nav() {
                             </ul>
                         </div>
                     </div>
+              </div>  
             </div>
         </div>
 

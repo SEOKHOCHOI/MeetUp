@@ -4,9 +4,6 @@ import Styles from './EnterAddress.module.scss';
 function EnterAddress() {
   return(
     <div className={Styles.enter_address}>
-      <header className={Styles.navbar}>
-        <nav>navbar자리.</nav>
-      </header>
       <main>
         <h4 id={Styles.room_name}>방이름</h4>
         <section>

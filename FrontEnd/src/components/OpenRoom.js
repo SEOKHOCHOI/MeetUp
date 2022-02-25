@@ -37,10 +37,6 @@ function OpenRoom() {
   };
   return(
     <div className={Styles.open_room}>
-      <header>
-        <h6>Meet Up</h6>
-        <nav>작대기세개</nav>
-      </header>
       <form onSubmit={onSubmit}>
         <main className={Styles.main}>
           <article>

@@ -11,7 +11,6 @@ function Historypage() {
     
     return(
         <div className= {Styles.history}>
-            <Nav/>
             <div className= {Styles.row}>
                 {
                     name.map((a, i)=>{
