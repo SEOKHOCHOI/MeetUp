@@ -17,7 +17,7 @@ function Menu() {
                             홈
                         </Link>
                     </li>
-                    <li><Link to ="mypage">마이페이지</Link></li>
+                    <li><Link to ="/mypage">마이페이지</Link></li>
                     <li>
                         <Link to = "/history">
                             히스토리
