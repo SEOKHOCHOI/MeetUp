@@ -13,7 +13,6 @@ $maincolor: #f2a341;
   text-decoration: none;
   color: $maincolor;
   z-index: 1;
-
   .nav_in {
     display: flex;
     justify-content: space-between;
@@ -25,7 +24,6 @@ $maincolor: #f2a341;
       right: auto;
     }
   }
-
   .nav_logo {
     font-size: 25px;
     padding-left: 20px;

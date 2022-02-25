@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Nav />
+      <Nav />
       <Routes>
         <Route exact path="/" element={<Main />}/>
         <Route path="/history" element={<Historypage />}/>
