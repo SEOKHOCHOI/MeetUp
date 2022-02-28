@@ -1,0 +1,269 @@
+$light-color: #f2c879;
+$normal-color: #f2a341;
+$deep-color: #d07025;
+$title-color: rgb(82, 74, 53); // 앱 이름
+$font-color: rgb(118, 118, 116); // 일반 글자
+$background-color: rgb(246, 240, 234);
+$name-color: rgb(239, 84, 83); // 방 이름
+$font-color-white: whitesmoke;
+$background-btn: rgb(92, 137, 199);
+
+@mixin display-flex($align-items: center, $justify-content: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+@mixin input($width: 250px) {
+  width: $width;
+  height: 25px;
+  outline: none;
+  margin: {
+    top: 2px;
+  }
+  border: 1px solid $light-color;
+  border: {
+    radius: 10px;
+  }
+  &:hover {
+    border: 1px solid $normal-color;
+  }
+}
+@mixin btn {
+  &:hover {
+    outline: 2px solid $light-color;
+  }
+  &:active {
+    background-color: $normal-color;
+    outline: 2px solid $normal-color;
+  }
+}
+@mixin people-num($radius: 10px 0 0 10px) {
+  height: 40px;
+  width: 40px;
+  border: none;
+  color: $font-color-white;
+
+  font: {
+    size: 30px;
+  }
+  border: {
+    radius: $radius;
+  }
+  background: {
+    color: $light-color;
+  }
+  @include btn;
+}
+
+.open_room {
+  @include display-flex(center, space-between);
+  flex-direction: column;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  .main {
+    .room_name_top {
+      h6 {
+        margin: {
+          bottom: 4px;
+        }
+        font: {
+          size: 15px;
+        }
+      }
+      input {
+        @include input;
+      }
+      div {
+        font: {
+          size: 12px;
+          weight: bolder;
+        }
+        margin: {
+          left: 3px;
+        }
+        color: $name-color;
+      }
+    }
+    #place_title {
+      margin: {
+        bottom: 4px;
+        left: 6px;
+      }
+      font: {
+        size: 14px;
+      }
+    }
+    .place_top {
+      @include display-flex(left);
+      flex-direction: column;
+      // overflow-x: auto;
+      height: 120px;
+      width: 250px;
+      border: 1px solid $light-color;
+      border-radius: 10px;
+      &:hover {
+        border: 1px solid $normal-color;
+      }
+      padding: {
+        top: 10px;
+        bottom: 10px;
+      }
+      margin: {
+        left: auto;
+        right: auto;
+      }
+      input[type="radio"] {
+        background-color: #ffff;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        margin-left: 12px;
+        border: 1px solid rgb(216, 216, 216);
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+        &:hover {
+          border-color: $normal-color;
+        }
+      }
+      input[type="radio"]:checked {
+        background-color: $normal-color;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        margin-left: 12px;
+        border: none;
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+        ~ span {
+          font: {
+            weight: bolder;
+            size: 17px;
+          }
+        }
+      }
+      label {
+        width: 245px;
+        font: {
+          size: 15px;
+        }
+        input {
+          margin: {
+            right: 8px;
+          }
+        }
+        &:hover {
+          font: {
+            weight: bolder;
+          }
+        }
+      }
+      // &::-webkit-scrollbar {
+      //   width: 13px;
+      // }
+      // &::-webkit-scrollbar-thumb {
+      //   border-radius: 10px;
+      //   background: {
+      //     color: $normal-color;
+      //     clip: padding-box;
+      //   }
+      //   border: 2px solid transparent;
+      // }
+      // &::-webkit-scrollbar-track {
+      //   background-color: $background-color;
+      //   border-radius: 10px;
+      //   box-shadow: inset 0px 0px 5px $light-color;
+      // }
+    }
+    #place_input {
+      @include input(185px);
+    }
+    #place_btn {
+      border: none;
+      background-color: $light-color;
+      color: $font-color-white;
+      width: 60px;
+      height: 28px;
+      margin: {
+        left: 2px;
+      }
+      font: {
+        weight: bolder;
+      }
+      border-radius: 10px;
+      @include btn;
+    }
+
+    aside {
+      @include display-flex;
+      justify-content: space-between;
+      border: 1px solid none;
+      width: 200px;
+      margin: {
+        right: auto;
+        left: auto;
+      }
+      input {
+        width: 116px;
+        text-align: center;
+        height: 36px;
+        outline: none;
+        border: {
+          top: 1px solid $light-color;
+          bottom: 1px solid $light-color;
+          right: none;
+          left: none;
+        }
+      }
+      button:first-child {
+        @include display-flex;
+        font: {
+          size: 40px;
+        }
+      }
+      button {
+        @include people-num;
+      }
+      #plus {
+        @include people-num(0 10px 10px 0);
+      }
+    }
+    #num_title {
+      margin: {
+        bottom: 10px;
+        left: 27px;
+      }
+      font: {
+        size: 14px;
+      }
+    }
+  }
+  footer {
+    @include display-flex;
+    letter-spacing: 3px;
+    margin: {
+      top: 140px;
+      bottom: 80px;
+    }
+    button {
+      @include display-flex;
+      width: 200px;
+      height: 55px;
+      color: $font-color-white;
+      border: none;
+      box-shadow: 0 4px 10px 2px rgb(220, 220, 220);
+      font: {
+        weight: bolder;
+        size: 22px;
+      }
+      background: {
+        color: $light-color;
+      }
+      border: {
+        radius: 22px;
+      }
+      @include btn;
+    }
+  }
+}
