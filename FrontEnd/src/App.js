@@ -8,6 +8,7 @@ import Manager from './Pages/Manager';
 import Mypage from './Pages/Mypage';
 import Edit from './components/mypage/Edit';
 import Nav from './components/Nav';
+import Email from './components/mypage/Email';
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='/manager/*' element={<Manager/>} />
         <Route path='/mypage' element={<Mypage/>} />
         <Route path='/mypage/edit' element={<Edit/>}/>
+        <Route path="/mypage/contact" element={<Email />} />
       </Routes>
       </BrowserRouter>
     </div>

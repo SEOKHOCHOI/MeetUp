@@ -31,7 +31,9 @@ function Mypage(){
                 </div>
                 <div className={Styles.mypage_detail}>
                     <Chat />
-                    <span className={Styles.mypage_title}>1대1 문의 하기</span>
+                    <Link to="contact">
+                        <span className={Styles.mypage_title}>1대1 문의 하기</span>
+                    </Link>
                 </div>
                 <div className={Styles.mypage_detail} >
                     <div onClick={onClick}>
