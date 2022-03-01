@@ -1,6 +1,8 @@
 import { CancelOutlined, Publish } from '@material-ui/icons'
 import React from 'react'
-import Styles from '../Manager.module.scss'
+
+import Styles from './ManagerDetail.module.scss'
+
 const Editable = ({ editForm, handleEditFormChange, onCancle }) => {
     
   return (

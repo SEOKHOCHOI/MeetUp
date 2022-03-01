@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { HiQuestionMarkCircle } from 'react-icons/hi';
 import { Link,} from 'react-router-dom';
 import Styles from './Mypage.module.scss'
-import Nav from './Nav';
+import Nav from '../components/Nav';
 
 function Mypage(){
     const [fold, setFold] = useState(false);

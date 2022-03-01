@@ -246,6 +246,9 @@ $background-btn: rgb(92, 137, 199);
       top: 140px;
       bottom: 80px;
     }
+    a {
+      text-decoration: none;
+    }
     button {
       @include display-flex;
       width: 200px;

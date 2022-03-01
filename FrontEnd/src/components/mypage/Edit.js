@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Nav from './Nav'
-import Address from './mypage/address';
+import Nav from '../Nav'
+import Address from './address';
 import Styles from './Edit.module.scss';
 function Edit(){
     // const [name, setName]=useState("");

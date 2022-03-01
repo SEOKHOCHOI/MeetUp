@@ -1,6 +1,7 @@
 /*eslint-disable*/
 import React, { useState } from 'react';
 import Styles from "./OpenRoom.module.scss";
+import { Link } from "react-router-dom";
 
 function OpenRoom() {
 
@@ -87,7 +88,7 @@ function OpenRoom() {
           </aside>
         </main>
         <footer>
-          <button type="submit">URL 공유하기</button>
+          <Link to="/enteraddress"><button type="submit">URL 공유하기</button></Link>
         </footer>
       </form>
     </div>

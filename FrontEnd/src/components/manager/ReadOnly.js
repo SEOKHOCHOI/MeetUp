@@ -1,6 +1,6 @@
 import { Delete, Edit } from '@material-ui/icons'
 import React from 'react'
-import Styles from '../Manager.module.scss'
+import Styles from './ManagerDetail.module.scss'
 
 const ReadOnly =({user, handleEditClick, onDelete})=>{
     return(

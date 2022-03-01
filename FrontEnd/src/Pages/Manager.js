@@ -3,8 +3,8 @@ import React, { Fragment, useState } from 'react';
 import Styles from './Manager.module.scss'
 import data from "../misc/mock-data.json"
 import {nanoid} from 'nanoid';
-import ReadOnly from './manager/ReadOnly';
-import Editable from './manager/Editable';
+import ReadOnly from '../components/manager/ReadOnly';
+import Editable from '../components/manager/Editable';
 
 function Manager(){
 const [user, setUser] = useState(data);

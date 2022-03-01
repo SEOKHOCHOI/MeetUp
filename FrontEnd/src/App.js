@@ -4,9 +4,9 @@ import OpenRoom from './components/OpenRoom.js';
 import EnterAddress from './components/EnterAddress.js';
 import Main from './components/Main.js';
 import Historypage from './components/Historypage.js';
-import Manager from './components/Manager';
-import Mypage from './components/Mypage';
-import Edit from './components/Edit';
+import Manager from './Pages/Manager';
+import Mypage from './Pages/Mypage';
+import Edit from './components/mypage/Edit';
 import Nav from './components/Nav';
 
 
