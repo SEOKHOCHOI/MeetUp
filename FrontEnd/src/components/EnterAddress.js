@@ -1,5 +1,6 @@
 import React from 'react';
 import Styles from './EnterAddress.module.scss';
+import { Link } from "react-router-dom";
 
 function EnterAddress() {
   return(
@@ -18,7 +19,9 @@ function EnterAddress() {
         </aside>
       </main>
       <footer className={Styles.end_top}>
-        <button id={Styles.end} onClick={()=>{}}>완료</button>
+        <Link to="/mapview">
+          <button id={Styles.end} onClick={()=>{}}>완료</button>
+        </Link>
       </footer>
     </div>
   );

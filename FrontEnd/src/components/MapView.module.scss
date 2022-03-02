@@ -1,0 +1,114 @@
+$first_color: #f2a341;
+
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.map_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: {
+    top: 20px;
+    left: auto;
+    right: auto;
+  }
+  max-width: 1000px;
+  height: 100vh;
+  box-sizing: border-box;
+
+  .map_area {
+    width: 100%;
+    height: calc(40vh - 60px);
+    background-image: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2F20121211_98%2Fkathyjs_13551946203033Bbik_JPEG%2F%25C1%25DF%25B1%25B9%25C1%25F6%25B5%25B53.jpg&type=sc960_832);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  .category_area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+
+    li {
+      list-style: none;
+      width: 96%;
+      margin: {
+        right: 25px;
+        bottom: 20px;
+      }
+      height: 120px;
+      padding: 10px;
+      border: 2px solid #f2a341;
+      border-radius: 10px;
+      display: inline-flex;
+      justify-content: space-around;
+      box-shadow: 5px 5px 10px -7px;
+      background-color: white;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .img_wrap {
+        width: 30%;
+        height: 100%;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .category_wrap {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+
+        .name_wrap {
+          font-weight: bold;
+          border-bottom: 1px solid #f2cb79;
+          padding-bottom: 10px;
+        }
+
+        .star_wrap {
+          color: #d97925;
+        }
+
+        .text_wrap {
+          font-size: 14px;
+        }
+      }
+
+      .category_thumb {
+        width: 10%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1.2rem;
+        color: #8c1b11;
+
+        i {
+          color: #8c1811;
+        }
+
+        p {
+          font-weight: bold;
+          font-family: "BMJUA";
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
