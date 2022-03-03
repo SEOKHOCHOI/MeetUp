@@ -30,8 +30,7 @@ $background-btn: rgb(92, 137, 199);
     left: auto;
     right: auto;
   }
-  .navbar {
-  }
+
   #room_name {
     @include display-flex;
     font: {
@@ -65,6 +64,9 @@ $background-btn: rgb(92, 137, 199);
 
       @include btn;
     }
+  }
+  a {
+    text-decoration: none;
   }
   .address_btn {
     @include display-flex;

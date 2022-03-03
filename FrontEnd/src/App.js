@@ -9,6 +9,7 @@ import Mypage from './Pages/Mypage';
 import Edit from './components/mypage/Edit';
 import Nav from './components/Nav';
 import Email from './components/mypage/Email';
+import MapView from './components/MapView';
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='/mypage' element={<Mypage/>} />
         <Route path='/mypage/edit' element={<Edit/>}/>
         <Route path="/mypage/contact" element={<Email />} />
+        <Route path="/mapview" element={<MapView />} />
       </Routes>
       </BrowserRouter>
     </div>
