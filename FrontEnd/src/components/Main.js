@@ -10,13 +10,13 @@ function Main() {
   return (
     <div className= {Styles.App}>
       <div className= {Styles.content}>
-        <div className= {Styles.explain}>
+        <div className= {Styles.explain}><br/><br/><br/>
           <span>약속 장소는 <span className= {Styles.highlighter}>Meet Up</span>!</span>
-          <p>이젠 중간 지점에서 만나세요</p>
+          <p>이젠 중간 지점에서 만나세요</p><br/>
         </div>
         
         <img className= {Styles.displayimg} src={require('../img/display_img1.jpg')}/>
-
+        <br/><br/>
         <Link to = "/openroom">
           <button className= {Styles.create} type='button'>
             방 만들기
