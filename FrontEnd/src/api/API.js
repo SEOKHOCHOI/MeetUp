@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 /*
   GET: axios.get(rul[, config])
@@ -35,6 +35,7 @@ import axios from 'axios';
         const data = await axios.get("url");
       } catch { // 오류 발생시 실행 }
 */
+
 const API = axios.create({
   baseURL: "http://localhost:8080",
   headers: {
@@ -42,6 +43,5 @@ const API = axios.create({
   },
   withCredentials: true,
 });
-
 
 export default API;
