@@ -10,6 +10,8 @@ import Edit from "./components/mypage/Edit";
 import Nav from "./components/Nav";
 import Email from "./components/mypage/Email";
 import MapView from "./components/MapView";
+import Login from "./components/Login";
+import ErrorPage from "./components/ErrorPage";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/mypage/edit" element={<Edit />} />
           <Route path="/mypage/contact" element={<Email />} />
           <Route path="/mapview" element={<MapView />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/:otherpage" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
     </div>

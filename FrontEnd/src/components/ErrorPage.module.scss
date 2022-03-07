@@ -1,0 +1,33 @@
+@import './Main.module.scss';
+
+$mainColor : #F2A341;;
+
+.error {
+    margin-top: 8vh;
+
+    img {
+        display: block;
+        width: 150px;
+        margin: 0 auto;
+    }
+    h3 {
+        font-family: 'BMJUA';
+        text-align: center;
+        color: red;
+        margin-top: 20px;
+    }
+    p {
+        font-size: 12px;
+        line-height: 15px;
+        margin-top: -10px;
+        text-align: center;
+    }
+    button {
+        @extend .create;
+
+        margin-top: 10px;
+        font-size: 15px;
+        padding: 15px;
+        margin-left: 135px;
+    }   
+}
