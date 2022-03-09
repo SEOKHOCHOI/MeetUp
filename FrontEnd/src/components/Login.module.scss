@@ -1,0 +1,87 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+$kakaoColor : #FEE500;
+$naverColor : #03C75A;
+
+.social {
+    background: white;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.name {
+    margin-left: 10px;
+}
+
+.wrap {
+   margin-top: 20px;
+}
+
+.kakao {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+    img {
+        width: 20px;
+    }
+    button {
+        width: 100%;
+        background: $kakaoColor;
+        border: 0;
+        border-radius: 10px;
+        align-items: center;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
+    span {
+        font-family: 'nanumsquare';
+        font-size: 16px;
+        text-align: center;
+        display: block;
+        margin-left: 5px;
+    }
+}
+
+.naver {
+    @extend .kakao;
+
+    img {
+        width: 30px;
+    }
+    button {
+        background: $naverColor;
+        padding: 15px;
+    }
+}
+
+.google {
+    @extend .kakao;
+
+    button {
+        background: white;
+        border: 2px solid #eee;
+    }
+}
+
+.checkbox {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    input {
+        display: inline-block;
+	    width: 15px;
+	    height: 15px;
+        cursor: pointer;
+    }
+    span {
+        display: block;
+        font-family: 'BMJUA';
+        margin-top: 3px;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,54 @@
+$maincolor: #f2c879;
+$subsolor: #f2a341;
+.container {
+  margin: 40px 20px;
+  .table_container {
+    border: 2px solid $subsolor;
+    margin: 50px auto;
+    width: 100%;
+    padding: 10px;
+    button {
+      cursor: pointer;
+      border: none;
+      color: $maincolor;
+      padding: 0;
+      background-color: white;
+      &:hover {
+        color: #f2a341;
+      }
+    }
+    thead {
+      th {
+        text-align: left;
+        padding: 10px;
+        background-color: gainsboro;
+        &:nth-child(1) {
+          width: 10%;
+        }
+        &:nth-child(2) {
+          width: 20%;
+        }
+        &:nth-child(4) {
+          width: 50%;
+        }
+        &:last-child {
+          width: 5%;
+        }
+      }
+    }
+
+    .edit {
+      input {
+        font-size: 15px;
+      }
+      .name,
+      .pwd,
+      .zipcode {
+        width: 100px;
+      }
+      .address {
+        width: 400px;
+      }
+    }
+  }
+}

@@ -195,7 +195,7 @@ $background-btn: rgb(92, 137, 199);
       @include btn;
     }
 
-    aside {
+    .num {
       @include display-flex;
       justify-content: space-between;
       border: 1px solid none;
@@ -239,12 +239,15 @@ $background-btn: rgb(92, 137, 199);
       }
     }
   }
-  footer {
+  .footer {
     @include display-flex;
     letter-spacing: 3px;
     margin: {
       top: 140px;
       bottom: 80px;
+    }
+    a {
+      text-decoration: none;
     }
     button {
       @include display-flex;
