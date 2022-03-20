@@ -1,7 +1,6 @@
 package com.meetup.meetup.domain.moim;
 
 import com.meetup.meetup.domain.BaseTimeEntity;
-import com.meetup.meetup.domain.user.User;
 
 import javax.persistence.*;
 
